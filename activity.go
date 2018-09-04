@@ -15,14 +15,16 @@ import (
 )
 
 // log is the default package logger
-var log = logger.GetLogger("activity-tibco-rest")
-var client = &http.Client{
-	Transport: &http.Transport{
-		TLSClientConfig: &tls.Config{
-			InsecureSkipVerify: true,
+var (
+	log    = logger.GetLogger("activity-tibco-rest")
+	client = &http.Client{
+		Transport: &http.Transport{
+			TLSClientConfig: &tls.Config{
+				InsecureSkipVerify: true,
+			},
 		},
-	},
-}
+	}
+)
 
 const (
 	methodGET    = "GET"
