@@ -1,10 +1,10 @@
 {
-    "name": "tibco-rest",
+    "name": "kabukky-rest",
     "type": "flogo:activity",
     "ref": "github.com/kabukky/flogorest",
     "version": "0.0.1",
-    "title": "Invoke REST Service",
-    "description": "Simple REST Activity",
+    "title": "Invoke REST Service Kabukky",
+    "description": "Simple REST Activity Kabukky",
     "homepage": "https://github.com/kabukky/flogorest",
     "input":[
       {

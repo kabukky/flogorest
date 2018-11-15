@@ -16,7 +16,7 @@ import (
 
 // log is the default package logger
 var (
-	log    = logger.GetLogger("activity-tibco-rest")
+	log    = logger.GetLogger("activity-kabukky-rest")
 	client = &http.Client{
 		Transport: &http.Transport{
 			TLSClientConfig: &tls.Config{
