@@ -153,6 +153,8 @@ func (a *RESTActivity) Eval(context activity.Context) (done bool, err error) {
 	log.Debug("response Status:", resp.Status)
 	respBody, _ := ioutil.ReadAll(resp.Body)
 
+	log.Debug("RESPONSE: " + string(respBody))
+
 	var result interface{}
 
 	d := json.NewDecoder(bytes.NewReader(respBody))
@@ -161,7 +163,7 @@ func (a *RESTActivity) Eval(context activity.Context) (done bool, err error) {
 
 	//json.Unmarshal(respBody, &result)
 
-	log.Debug("response Body:", result)
+	log.Debugf("response Body: %#v", result)
 
 	context.SetOutput(ovResult, result)
 	context.SetOutput(ovStatus, resp.StatusCode)
